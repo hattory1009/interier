@@ -31,18 +31,21 @@
             align-items: center;
             padding: 20px 0;
             border-bottom: 1px solid #e0d6c5;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 600;
             color: #b5977a;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -50,6 +53,7 @@
             color: #2c3e4f;
             font-weight: 400;
             transition: 0.3s;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .nav-links a:hover {
@@ -63,15 +67,20 @@
             margin-bottom: 40px;
             box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1);
             border: 1px solid #f0e4d5;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 5vw, 2.5rem);
             color: #2c3e4f;
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
+            word-break: break-word;
         }
 
         .section-title::after {
@@ -91,24 +100,27 @@
 
         .hero-name {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
             font-weight: 600;
             color: #2c3e4f;
             margin-bottom: 10px;
+            word-break: break-word;
         }
 
         .hero-profession {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             color: #b5977a;
             letter-spacing: 3px;
             text-transform: uppercase;
+            word-break: break-word;
         }
 
         .hero-description {
             max-width: 700px;
             margin: 30px auto;
             color: #5d6d7e;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            word-break: break-word;
         }
 
         .filters {
@@ -123,12 +135,13 @@
             background: transparent;
             border: 2px solid #b5977a;
             color: #2c3e4f;
-            padding: 12px 30px;
+            padding: 12px 25px;
             border-radius: 60px;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
             font-weight: 500;
             cursor: pointer;
             transition: 0.3s;
+            white-space: nowrap;
         }
 
         .filter-btn:hover,
@@ -139,7 +152,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
@@ -151,6 +164,7 @@
             box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
             transition: 0.3s;
             cursor: pointer;
+            word-break: break-word;
         }
 
         .project-card:hover {
@@ -159,7 +173,7 @@
         }
 
         .project-image {
-            height: 300px;
+            height: 250px;
             background-size: cover;
             background-position: center;
             transition: 0.5s;
@@ -175,28 +189,31 @@
 
         .project-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 3.5vw, 1.5rem);
             color: #2c3e4f;
             margin-bottom: 10px;
+            word-break: break-word;
         }
 
         .project-style {
             color: #b5977a;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
+            word-break: break-word;
         }
 
         .project-desc {
             color: #5d6d7e;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
+            word-break: break-word;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
@@ -204,10 +221,11 @@
         .service-item {
             background: #fcf9f6;
             border-radius: 30px;
-            padding: 40px 30px;
+            padding: 40px 25px;
             text-align: center;
             border: 1px solid #f0e4d5;
             transition: 0.3s;
+            word-break: break-word;
         }
 
         .service-item:hover {
@@ -217,20 +235,25 @@
         }
 
         .service-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
         .service-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 3.5vw, 1.5rem);
             color: #2c3e4f;
             margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        .service-item div:nth-child(3) {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .service-price {
             color: #b5977a;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-top: 15px;
         }
@@ -248,29 +271,31 @@
 
         .review-card {
             flex: 0 0 100%;
-            padding: 40px;
+            padding: 40px 30px;
             background: #fcf9f6;
             border-radius: 30px;
             border: 1px solid #f0e4d5;
             margin: 0 10px;
+            word-break: break-word;
         }
 
         .review-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 1.7;
             color: #2c3e4f;
             font-style: italic;
             margin-bottom: 20px;
+            word-break: break-word;
         }
 
         .review-author {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
             color: #b5977a;
         }
 
         .review-project {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #5d6d7e;
         }
 
@@ -303,7 +328,7 @@
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
@@ -315,26 +340,28 @@
 
         .process-number {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: clamp(3rem, 8vw, 4rem);
             color: rgba(181, 151, 122, 0.2);
             line-height: 1;
         }
 
         .process-title {
-            font-size: 1.3rem;
+            font-size: clamp(1.2rem, 3vw, 1.3rem);
             font-weight: 600;
             margin: 15px 0 10px;
             color: #2c3e4f;
+            word-break: break-word;
         }
 
         .process-desc {
             color: #5d6d7e;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            word-break: break-word;
         }
 
         .contacts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
@@ -342,10 +369,11 @@
         .contact-card {
             background: #fcf9f6;
             border-radius: 30px;
-            padding: 40px;
+            padding: 40px 30px;
             text-align: center;
             border: 1px solid #f0e4d5;
             transition: 0.3s;
+            word-break: break-word;
         }
 
         .contact-card:hover {
@@ -355,12 +383,12 @@
         }
 
         .contact-icon {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 20px;
         }
 
         .contact-label {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             color: #b5977a;
             letter-spacing: 2px;
@@ -368,9 +396,10 @@
         }
 
         .contact-value {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #2c3e4f;
             font-weight: 500;
+            word-break: break-word;
         }
 
         .contact-btn {
@@ -382,6 +411,7 @@
             color: #b5977a;
             text-decoration: none;
             transition: 0.3s;
+            font-size: 0.95rem;
         }
 
         .contact-btn:hover {
@@ -395,12 +425,114 @@
             color: #8a9aa8;
             font-size: 0.9rem;
             border-top: 1px solid #e0d6c5;
+            word-break: break-word;
         }
 
+        /* АДАПТАЦИЯ */
         @media (max-width: 768px) {
-            .card { padding: 30px; }
-            .hero-name { font-size: 2.5rem; }
-            .gallery-grid { grid-template-columns: 1fr; }
+            .card {
+                padding: 30px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .filter-btn {
+                white-space: normal;
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-name {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 25px;
+            }
+
+            .hero-name {
+                font-size: 1.8rem;
+            }
+
+            .hero-profession {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .project-title {
+                font-size: 1.2rem;
+            }
+
+            .service-item {
+                padding: 30px 20px;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .review-card {
+                padding: 30px 20px;
+            }
+
+            .review-text {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-name {
+                font-size: 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .project-content {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -408,7 +540,7 @@
 
     <div class="container">
 
-        <!-- НАВИГАЦИЯ -->
+        <!-- НАВИГАЦИЯ (ИСПРАВЛЕНО) -->
         <nav class="navbar">
             <div class="logo">interior.design</div>
             <div class="nav-links">
@@ -419,7 +551,7 @@
             </div>
         </nav>
 
-        <!-- ШАПКА -->
+        <!-- ШАПКА (ИСПРАВЛЕНО) -->
         <section class="card">
             <div class="hero">
                 <div class="hero-name">ЕЛЕНА ВОЛКОВА</div>
@@ -431,7 +563,7 @@
             </div>
         </section>
 
-        <!-- ФИЛЬТРЫ И ГАЛЕРЕЯ -->
+        <!-- ФИЛЬТРЫ И ГАЛЕРЕЯ (ИСПРАВЛЕНО) -->
         <section id="projects" class="card">
             <h2 class="section-title">проекты</h2>
             
@@ -494,7 +626,7 @@
             </div>
         </section>
 
-        <!-- УСЛУГИ И ЦЕНЫ -->
+        <!-- УСЛУГИ И ЦЕНЫ (ИСПРАВЛЕНО) -->
         <section id="services" class="card">
             <h2 class="section-title">услуги</h2>
             <div class="services-grid">
@@ -525,7 +657,7 @@
             </div>
         </section>
 
-        <!-- ПРОЦЕСС РАБОТЫ -->
+        <!-- ПРОЦЕСС РАБОТЫ (ИСПРАВЛЕНО) -->
         <section class="card">
             <h2 class="section-title">как мы работаем</h2>
             <div class="process-grid">
@@ -552,7 +684,7 @@
             </div>
         </section>
 
-        <!-- ОТЗЫВЫ -->
+        <!-- ОТЗЫВЫ (ИСПРАВЛЕНО) -->
         <section id="reviews" class="card">
             <h2 class="section-title">отзывы</h2>
             <div class="reviews-section">
@@ -580,7 +712,7 @@
             </div>
         </section>
 
-        <!-- КОНТАКТЫ (только Telegram и MAX) -->
+        <!-- КОНТАКТЫ (только Telegram и MAX) (ИСПРАВЛЕНО) -->
         <section id="contacts" class="card">
             <h2 class="section-title">контакты</h2>
             <div class="contacts-grid">
@@ -599,7 +731,7 @@
             </div>
         </section>
 
-        <!-- ПОДВАЛ -->
+        <!-- ПОДВАЛ (ИСПРАВЛЕНО) -->
         <footer class="footer">
             © 2026 · Елена Волкова · Дизайн интерьеров
         </footer>
